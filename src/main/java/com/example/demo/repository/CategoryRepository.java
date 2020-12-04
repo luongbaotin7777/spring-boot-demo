@@ -9,7 +9,11 @@ import com.example.demo.entities.Category;
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 	Category findByName(String name);
 	Boolean existsByName(String name);
-	
+	@Override
+	default long count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 	
 }
